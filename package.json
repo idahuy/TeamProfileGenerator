@@ -1,0 +1,25 @@
+{
+  "name": "teamprofilegenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "Jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idahuy/TeamProfileGenerator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/idahuy/TeamProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/idahuy/TeamProfileGenerator#readme",
+  "devDependencies": {
+    "jest": "^29.0.2"
+  }
+}
