@@ -1,6 +1,6 @@
 const Manager = require('./lib/Manager.js');
-const Engineer = require('/lib/Engineer.js');
-const Intern = require('/lib/Intern.js');
+const Engineer = require('./lib/Engineer.js');
+const Intern = require('./lib/Intern.js');
 const inquirer = require("Inquirer");
 const path = require("path");
 const fs = require('fs');
@@ -13,7 +13,7 @@ teamArray = [];
 function run() {
     // createTeam will run through the oop functions and adds the team member 
     function createTeam () {
-        inquirer.createPromptModule([{
+        inquirer.prompt([{
             type: 'list',
             message: 'What type of employee would you like to add to your team?',
             name: 'addEmployeePrompt',
