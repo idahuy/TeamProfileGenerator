@@ -23,13 +23,13 @@ const generateEngineer = engineer =>  {
     <div class="card employee-card">
         <div class="card-header bg-primary text-white">
             <h2 class="card-title">${engineer.getName()}</h2>
-            <h3 class="card-title><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
+            <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
         </div>
         <div class="card-body">
             <ul class="list-group">
                 <li class="list-group-item">ID: ${engineer.getId()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}</a></li>
-                <li class="list-group-item">Github <a href="https://github.com/${engineer.getGithub()}" target="_blank" rel="noopener noreferrer">${engineer.getGithub()}</a></li>
+                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+                <li class="list-group-item">Github: <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></li>
             </ul>
         </div>
     </div>`;
@@ -40,7 +40,7 @@ const generateIntern = intern => {
     <div class="card employee-card">
         <div class="card-header bg-primary text-white">
             <h2 class="card-title">${intern.getName()}</h2>
-            <h3 class="card-title"><i class="fas fa-user-graduate mr-2></i>${intern.getRole()}</h3>
+            <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>${intern.getRole()}</h3>
         </div>
         <div class="card-body">
             <ul class="list-group">
@@ -87,7 +87,7 @@ return `
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="style.css">
-<script src="https://kit.fontawesome.com/c502137733.js"></script>
+<script src="https://kit.fontawesome.com/5ddd6c3adb.js"></script>
 </head>
 <body>
 <div class="container-fluid">
