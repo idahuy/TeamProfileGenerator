@@ -11,6 +11,7 @@ const generateTeam = require('./src/template.js');
 teamArray = [];
 
 function run() {
+    // createTeam will run through the oop functions and adds the team member 
     function createTeam () {
         inquirer.createPromptModule([{
             type: 'list',
@@ -36,6 +37,7 @@ function run() {
     }
 
     // oop functions
+    // inquiries for manager team member
     function addManager() {
         inquirer.prompt ([
             {
@@ -58,13 +60,15 @@ function run() {
                 name: "managerOfficeNumber",
                 message: "What is the manager's Office Number?"
             }
+            
+            // below lines put all answers into an object and then pushes object into an array 
         ]).then(answers => {
             const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
             teamArray.push(manager);
             createTeam();
         });
     }
-
+    // inquiries for engineer team member
     function addEngineer() {
         inquirer.prompt ([
             {
@@ -93,14 +97,43 @@ function run() {
             createTeam();
         });
     }
-
+    // inquiries for intern team member
     function addIntern() {
         inquirer.prompt([
             {
                 type: "input",
                 name: "internName",
                 message: "What is the intern's name?"
+            },
+            {
+                type: "input",
+                name: "internId",
+                message: "What is the intern's ID?"
+            },
+            {
+                type: "input",
+                name: "internEmail",
+                message: "What is the intern's email?"
+            },
+            {
+                type: "input",
+                name: "internSchool",
+                message: "What school does the intern attend?"
             }
         ])
+        .then(answers => {
+            const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+            teamArray.push(intern);
+            createTeam();
+        });
     }
+
+    function htmlBuilder () {
+        console.log("Team created")
+        fs.writeFileSync(outputPath, generateTeam(teamArray), "UTF-8")
+    }
+
+    createTeam();
 }
+
+run();
